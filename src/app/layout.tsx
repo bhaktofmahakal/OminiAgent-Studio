@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     title: "OmniAgent Studio",
     description: "Build, Chat, and Deploy Multi-Model AI Agents",
   },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export const viewport: Viewport = {
