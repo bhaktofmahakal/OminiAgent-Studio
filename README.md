@@ -1,117 +1,102 @@
-# OmniAgent Studio 🤖
+<p align="center">
+  <img width="100%" alt="OmniAgent Studio Banner" src="https://raw.githubusercontent.com/bhaktofmahakal/OminiAgent-Studio/main/public/repository/banner.png" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop'" />
+</p>
 
-A **developer-first** AI agent builder that enables you to create, test, and deploy AI agents across multiple models (GPT-4o, Claude, Gemini, Groq) in minutes.
+<p align="center">
+  <a href="README.md">English</a> |
+  <a href="#-key-features">Features</a> |
+  <a href="#-quick-start">Quick Start</a> |
+  <a href="#-tech-stack">Tech Stack</a>
+</p>
 
-## 🚀 Features
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/Tailwind-4-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/TypeScript-Ready-blue?style=for-the-badge&logo=typescript" alt="TypeScript" />
+</p>
 
-### ✨ **Multi-Model AI Integration**
-- **4 AI Models**: GPT-4o, Claude 3.5 Haiku, Gemini 1.5 Pro, Groq Mixtral
-- **Smart Routing**: Automatically route prompts to optimal models based on task type
-- **Real-time Performance**: Live latency tracking and cost monitoring
-- **Unified API**: Single interface for all AI models with automatic fallbacks
+<p align="center">
+  <img src="https://img.shields.io/badge/AI_Models-GPT--4o_|_Claude_|_Gemini-brightgreen?style=flat-square" alt="AI Models" />
+  <img src="https://img.shields.io/badge/Vector_DB-Supabase-3ECF8E?style=flat-square&logo=supabase" alt="Supabase" />
+  <img src="https://img.shields.io/badge/Auth-Clerk-6C47FF?style=flat-square&logo=clerk" alt="Clerk" />
+</p>
 
-### 🎨 **Modern UI/UX**
-- **Developer-Centric Design**: Inspired by Cursor IDE and modern dev tools
-- **Command Palette**: Press `⌘+K` for instant navigation and actions
-- **Responsive Design**: Mobile-first with progressive enhancement
-- **Dark/Light Mode**: System-aware theme switching
-- **Gradient Animations**: Premium visual effects and micro-interactions
+---
 
-### 🛠️ **Agent Builder**
-- **Visual Interface**: Two-panel design with live preview
-- **Template Gallery**: Pre-built agents for common use cases
-- **Real-time Testing**: Test your agent configurations instantly
-- **Advanced Settings**: Temperature, tokens, tools, and guardrails
-- **Tool Integration**: Web search, code execution, math solving
-- **RAG Capability**: Intelligent document chunking and embedding storage in Supabase Vector database
+## 🤖 Overview
 
-### 📊 **Analytics Dashboard**
-- **Real-time Metrics**: Request volume, costs, latency, success rates
-- **Interactive Charts**: Trend analysis and model performance comparisons
-- **Cost Optimization**: Token usage breakdown and recommendations
+**OmniAgent Studio** is a developer-first AI agent builder that enables you to create, test, and deploy AI agents across multiple models (GPT-4o, Claude, Gemini, Groq) in minutes. Built for speed, scalability, and premium developer experience.
 
-### 🔐 **Enterprise Authentication**
-- **Clerk Integration**: Secure user management and authentication
-- **Protected Routes**: Middleware-based route protection
+## ✨ Key Features
 
-### 🗄️ **Database & Storage**
-- **Supabase PostgreSQL**: Scalable database with real-time features
-- **Vector Storage**: pgvector support for RAG (Retrieval-Augmented Generation)
-- **Row Level Security**: Data protection and user isolation
+- **Multi-Model Orchestration**: Unified interface for GPT-4o, Claude 3.5, Gemini 1.5 Pro, and Groq.
+- **Advanced RAG Engine**: Intelligent document chunking and semantic embedding storage via Supabase Vector.
+- **Developer-First UI**: Cursor-inspired command palette (`⌘+K`), real-time latency tracking, and premium animations.
+- **Enterprise-Grade Auth**: Secure user management powered by Clerk with Row-Level Security (RLS).
+- **Real-time Analytics**: Live monitoring of token usage, costs, and model performance metrics.
 
-## 🏗️ **Technical Architecture**
+## 🏗️ Tech Stack
 
-### **Frontend Stack**
-- **Next.js 15** - App Router with Server Components
-- **React 19** - Latest features with Concurrent Rendering
-- **TypeScript** - Full type safety across the application
-- **TailwindCSS 4** - Utility-first styling with custom design system
-- **Radix UI** - Accessible components with shadcn/ui
-- **Framer Motion** - Smooth animations and transitions
+### **Core**
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
 
-### **Backend Integration**
-- **REST API Routes** - Next.js API routes for backend logic
-- **Supabase Client** - Real-time database and auth integration
-- **AI Model APIs** - Direct integration with OpenAI, Anthropic, Google, Groq
-- **Vector Search** - Semantic search using Google Generative AI embeddings
+### **Backend & AI**
+- **Database**: [Supabase](https://supabase.com/) (PostgreSQL + pgvector)
+- **Auth**: [Clerk](https://clerk.com/)
+- **AI Models**: OpenAI, Anthropic, Google Gemini, Groq
+- **Embeddings**: Google Generative AI (text-embedding-004)
 
-## 🚀 **Quick Start**
+## 🚀 Quick Start
 
 ### **Prerequisites**
 - Node.js 18+
-- npm or yarn
 - Supabase account with pgvector enabled
 - Clerk account
-- AI API keys (OpenAI, Google Gemini, Groq)
+- AI API keys (Google, OpenAI, OpenRouter)
 
 ### **Installation**
 
-1. **Clone the repository**
+1. **Clone & Install**
 ```bash
-git clone https://github.com/bhaktofmahakal/OminiAgent-Studio
+git clone https://github.com/bhaktofmahakal/OminiAgent-Studio.git
 cd OminiAgent-Studio
-```
-
-2. **Install dependencies**
-```bash
 npm install
 ```
 
-3. **Environment Setup**
-Create a `.env.local` file:
+2. **Environment Configuration**
+Create a `.env.local` file with your credentials:
 ```env
-# Clerk Authentication
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
 CLERK_SECRET_KEY=sk_test_...
-
-# Supabase Database
 NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
-SUPABASE_SERVICE_ROLE_KEY=eyJ...
-
-# AI Model APIs
 GOOGLE_AI_API_KEY=AIza...
-OPENROUTER_API_KEY=sk-or-...
 ```
 
-4. **Start Development Server**
+3. **Run Development Server**
 ```bash
 npm run dev
 ```
 
-Visit `http://localhost:3000` to see your application!
+## 🚀 Deployment
 
-## 🚀 **Deployment**
+The fastest way to deploy is via **Vercel**:
 
-### **Vercel (Recommended)**
-1. Connect your GitHub repository to Vercel
-2. Add environment variables in Vercel dashboard
-3. Deploy with automatic scaling and edge functions
+1. Fork this repository.
+2. Connect your fork to Vercel.
+3. Configure environment variables.
+4. Deploy!
 
-## 📄 **License**
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-**Built with ❤️ by the OmniAgent Studio team**
+<p align="center">
+  Built with ❤️ by the <b>OmniAgent Studio</b> team
+</p>
