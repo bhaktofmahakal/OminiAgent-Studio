@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Chivo+Mono:wght@300;400;700&display=swap');
+@import "tailwindcss";
+@config "../../tailwind.config.mjs";
+@source "../**/*.{js,ts,jsx,tsx,mdx}";
+
+@layer base {
+  :root {
+    /* === ACID BRUTALIST PALETTE === */
+    --background: 0 0% 3%;
+    /* Deep Charcoal */
+    --foreground: 0 0% 98%;
+
+    --primary: 75 100% 50%;
+    /* Acid Green/Yellow #ccff00 */
+    --primary-foreground: 0 0% 3%;
+
+    --accent: 0 100% 50%;
+    /* Pure Hazard Red */
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 10%;
+    --ring: 75 100% 50%;
+
+    --radius: 0px;
+    /* Rigid Brutalism */
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+    font-feature-settings: "ss01", "ss02", "cv01";
+    cursor: default;
+  }
+
+  body {
+    background-color: #080808;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: #fff;
+    font-family: var(--font-body), monospace;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading), sans-serif;
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  /* CUSTOM SCROLLBAR - MINIMAL */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
+
+@layer utilities {
+
+  /* SCANLINE EFFECT */
+  .scanlines {
+    background: linear-gradient(to bottom,
+        transparent 50%,
+        rgba(204, 255, 0, 0.02) 50%);
+    background-size: 100% 4px;
+    z-index: 50;
+    pointer-events: none;
+  }
+
+  /* BRUTALIST BOXES */
+  .brutal-card {
+    background: #0d0d0d;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .brutal-card:hover {
+    border-color: hsl(var(--primary));
+    box-shadow: 12px 12px 0px rgba(204, 255, 0, 0.1);
+    transform: translate(-4px, -4px);
+  }
+
+  .brutal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .brutal-btn:hover {
+    box-shadow: 4px 4px 0px #fff;
+    transform: translate(-2px, -2px);
+  }
+
+  .brutal-btn:active {
+    box-shadow: 0px 0px 0px #fff;
+    transform: translate(0, 0);
+  }
+
+  .tech-border {
+    position: relative;
+  }
+
+  .tech-border::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #fff;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+
+  .underline-glow {
+    position: relative;
+  }
+
+  .underline-glow::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 10px hsl(var(--primary));
+    transition: width 0.3s ease;
+  }
+
+  .underline-glow:hover::after {
+    width: 100%;
+  }
+
+  .acid-text {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 15px rgba(204, 255, 0, 0.3);
+  }
+
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Ffilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    z-index: 200;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  .module-tag {
+    background: #ccff00;
+    color: #000;
+    font-size: 9px;
+    padding: 2px 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 0.1em;
+  }
+
+  .force-visible-black {
+    color: #000000 !important;
+  }
+
+  .force-visible-white {
+    color: #ffffff !important;
+  }
+
+  .force-visible-primary {
+    color: #ccff00 !important;
+  }
+
+  .force-bg-primary {
+    background-color: #ccff00 !important;
+  }
+}

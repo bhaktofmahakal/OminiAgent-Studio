@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /profile/
+Disallow: /api/
+
+Sitemap: https://omniagent.studio/sitemap.xml
