@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="40%" alt="OmniAgent Studio Banner" src="public/repository/banner.png" />
+  <img width="50%" alt="OmniAgent Studio Banner" src="public/repository/banner.png" />
 </p>
 
 <p align="center">
