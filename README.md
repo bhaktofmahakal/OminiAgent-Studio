@@ -1,5 +1,15 @@
 <p align="center">
-  <img width="100%" alt="OmniAgent Studio Banner" src="https://raw.githubusercontent.com/bhaktofmahakal/OminiAgent-Studio/main/public/repository/banner.png" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop'" />
+  <img src="public/repository/logo.png" alt="OmniAgent Studio" width="160" />
+</p>
+
+<h1 align="center">OmniAgent Studio</h1>
+
+<p align="center">
+  <strong>The Developer-First Workspace for Orchestrating Intelligent AI Agents.</strong>
+</p>
+
+<p align="center">
+  <img src="public/repository/banner.png" alt="OmniAgent Studio Banner" width="800" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
 </p>
 
 <p align="center">
