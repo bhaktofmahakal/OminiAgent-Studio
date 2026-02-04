@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100%" alt="OmniAgent Studio Banner" src="https://raw.githubusercontent.com/bhaktofmahakal/OminiAgent-Studio/main/public/repository/banner.png" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop'" />
+  <img width="100%" alt="OmniAgent Studio Banner" src="https://raw.githubusercontent.com/bhaktofmahakal/OminiAgent-Studio/main/public/repository/logic_lattice.png" onerror="this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop'" />
 </p>
 
 <p align="center">
