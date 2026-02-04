@@ -55,12 +55,10 @@ interface Team {
 }
 
 interface Metrics {
-  summary: {
-    totalRequests: number
-    successRate: number
-    totalCost: number
-    averageLatency: number
-  },
+  totalRequests: number
+  successRate: number
+  totalCost: number
+  avgLatency: number
   recentMetrics?: Array<{
     timestamp: string
     message: string
@@ -173,9 +171,9 @@ export default function Dashboard() {
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { label: 'INSTANCES', value: agents.length, icon: RiDatabase2Fill, trend: 'ACTIVE' },
-            { label: 'SUCCESS_RATE', value: metrics?.summary.successRate.toFixed(1) || 0, suffix: '%', icon: RiPulseFill, trend: '+0.4%' },
-            { label: 'AVG_LATENCY', value: metrics?.summary.averageLatency || 0, suffix: 'ms', icon: RiTimeLine, trend: '-12ms' },
-            { label: 'TOTAL_BURN', value: (metrics?.summary.totalCost || 0).toFixed(4), prefix: '$', icon: RiFlashlightFill, trend: 'NOMINAL' }
+            { label: 'SUCCESS_RATE', value: metrics?.successRate?.toFixed(1) || 0, suffix: '%', icon: RiPulseFill, trend: '+0.4%' },
+            { label: 'AVG_LATENCY', value: metrics?.avgLatency || 0, suffix: 'ms', icon: RiTimeLine, trend: '-12ms' },
+            { label: 'TOTAL_BURN', value: (metrics?.totalCost || 0).toFixed(4), prefix: '$', icon: RiFlashlightFill, trend: 'NOMINAL' }
           ].map((stat, i) => (
             <div key={i} className="border border-white/20 bg-white/[0.03] p-6 transition-all hover:border-[#ccff00]/60">
               <div className="flex items-center justify-between mb-4">
